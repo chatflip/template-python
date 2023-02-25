@@ -12,9 +12,3 @@
 ```bash
 poetry install
 ```
-
-## Usage
-
-```bash
-
-```
