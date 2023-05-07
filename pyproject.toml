@@ -7,7 +7,7 @@ authors = ["chatflip <oo.chat.flip@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8,<3.10"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pysen = "^0.10"
 black = "21.10b0"
 flake8 = "4.0.1"
