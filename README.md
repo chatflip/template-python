@@ -1,7 +1,5 @@
 # template-python
 
-## Description
-
 ## Requirement
 
 - Python >= 3.9
@@ -18,3 +16,7 @@ poetry install
 ```bash
 
 ```
+
+## Author
+
+[chatflip](https://github.com/chatflip)
