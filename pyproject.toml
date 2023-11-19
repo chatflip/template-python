@@ -1,46 +1,19 @@
 [tool.poetry]
 name = "template-python"
-version = "0.1.0"
+version = "0.0.1"
 description = ""
 authors = ["chatflip <oo.chat.flip@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8,<3.10"
+python = "^3.9,<3.11"
 
-[tool.poetry.dev-dependencies]
-pysen = "^0.10"
-black = "21.10b0"
-flake8 = "4.0.1"
-isort = "5.10.1"
-mypy = "0.910"
-click = "8.0.2"
-
-[tool.pysen]
-version = "0.10"
-
-[tool.pysen.lint]
-enable_black = true
-enable_flake8 = true
-enable_isort = true
-enable_mypy = true
-mypy_preset = "very_strict"
-line_length = 88
-py_version = "py39"
-[[tool.pysen.lint.mypy_targets]]
-paths = ["src/"]
-
-[tool.pysen.lint.source]
-include_globs = ["src/**/*.py"]
-
-[tool.isort]
-target-version = ["py39"]
-profile = "black"
-line_length = 88
+[tool.poetry.group.dev.dependencies]
+ruff = "0.1.5"
+mypy = "1.7.0"
 
 [tool.mypy]
 python_version = 3.9
-# following setting is same as pysen
-# https://github.com/pfnet/pysen/blob/main/setup.cfg#L12
+files = ["src"]
 check_untyped_defs = true
 disallow_any_decorated = false
 disallow_any_generics = false
