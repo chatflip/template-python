@@ -1,17 +1,14 @@
 [tool.poetry]
-name = "template-python"
-version = "0.0.0"
-description = ""
-authors = ["chatflip <oo.chat.flip@gmail.com>"]
 package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
 
 [tool.poetry.group.dev.dependencies]
-ruff = "0.5.7"
+ruff = "0.6.9"
 mypy = "1.11.1"
+pre-commit = "^4.0.1"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry>=1.8","poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
