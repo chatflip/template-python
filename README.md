@@ -2,20 +2,23 @@
 
 ## Requirement
 
-- Python >= 3.9
-- Poetry >= 1.8
+- python >= 3.10
+- uv >= 0.3
 
 ## Installation
 
 ```bash
-poetry install
+uv sync
 pre-commit install
+bash ./scripts/install_uv_tools.sh 
 ```
 
 ## Usage
 
 ```bash
-
+ruff format
+ruff check --fix .
+mypy .
 ```
 
 ## Author

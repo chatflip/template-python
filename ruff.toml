@@ -31,7 +31,14 @@ exclude = [
 # Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
 # Unlike Flake8, Ruff doesn't enable pycodestyle warnings (`W`) or
 # McCabe complexity (`C901`) by default.
-select = ["C", "E", "F", "I", "W"]
+select = [
+    "C", # flake8-comprehensions
+    "E", # pycodestyle error
+    "F", # Pyflakes
+    "I", # isort
+    "W" # pycodestyle warning
+
+]
 ignore = []
 
 extend-select = []
