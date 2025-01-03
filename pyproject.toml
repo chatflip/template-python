@@ -5,3 +5,11 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "mdformat==0.7.21",
+    "mdformat-footnote==0.1.1",
+    "mdformat-frontmatter==2.0.8",
+    "mdformat-gfm==0.4.1",
+]
