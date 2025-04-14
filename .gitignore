@@ -129,7 +129,6 @@ dmypy.json
 .pyre/
 
 # Prettier
-.vscode
 .prettierrc
 
 # Ruff
