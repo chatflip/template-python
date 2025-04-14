@@ -2,7 +2,7 @@
 
 ## Requirement
 
-- python >= 3.10
+- python >= 3.11
 - uv >= 0.3
 
 ## Installation
@@ -10,7 +10,6 @@
 ```bash
 uv sync
 pre-commit install
-bash ./scripts/install_uv_tools.sh 
 ```
 
 ## Usage
