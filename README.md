@@ -3,7 +3,7 @@
 ## Requirement
 
 - python >= 3.11
-- uv >= 0.3
+- uv >= 0.7
 
 ## Installation
 
