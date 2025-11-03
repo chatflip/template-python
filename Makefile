@@ -8,10 +8,19 @@ endif
 
 .PHONY: lint format test
 
+.DEFAULT_GOAL := help
+
+help:
+	@echo "Usage: make <target>"
+	@echo "Targets:"
+	@echo "  format - Format code using ruff"
+	@echo "  lint - Lint code using ruff and mypy"
+	@echo "  test - Run tests using pytest"
+
 format:
 	mdformat README.md
+	uv run ruff check $(SOURCE_FILES) $(TEST_FILES) --fix
 	uv run ruff format $(SOURCE_FILES) $(TEST_FILES)
-	uv run ruff check $(SOURCE_FILES) $(TEST_FILES) --fix-only --exit-zero
 
 lint:
 	uv run ruff check $(SOURCE_FILES) $(TEST_FILES)

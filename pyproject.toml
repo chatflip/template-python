@@ -1,25 +1,25 @@
 [project]
 name = "template-python"
-version = "0.0.1"
+version = "0.0.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
 ]
 
 [dependency-groups]
-test = [
-    "pytest",
-] 
-
 lint = [
-    "mypy~=1.17.0",
-    "ruff~=0.12.0",
+    "mypy~=1.18.2",
+    "ruff~=0.14.3",
     "mdformat==0.7.21",
     "mdformat-footnote==0.1.1",
     "mdformat-frontmatter==2.0.8",
     "mdformat-gfm==0.4.1",
 ]
 
+test = [
+    "pytest",
+] 
+
 [tool.uv]
-default-groups = ["test", "lint"]
+default-groups = "all"
