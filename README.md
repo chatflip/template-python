@@ -2,22 +2,20 @@
 
 ## Requirement
 
-- python >= 3.11
-- uv >= 0.7
+- uv >= 0.9
 
 ## Installation
 
 ```bash
-uv sync
-pre-commit install
+make install
 ```
 
 ## Usage
 
 ```bash
-ruff format
-ruff check --fix .
-mypy .
+make format
+make lint
+make test
 ```
 
 ## Author

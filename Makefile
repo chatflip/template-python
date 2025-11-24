@@ -1,30 +1,26 @@
-ifndef SOURCE_FILES
-	export SOURCE_FILES:=src
-endif
-
-ifndef TEST_FILES
-	export TEST_FILES:=tests
-endif
-
-.PHONY: lint format test
+.PHONY: install lint format test
 
 .DEFAULT_GOAL := help
 
 help:
 	@echo "Usage: make <target>"
 	@echo "Targets:"
+	@echo "  install - Install dependencies"
 	@echo "  format - Format code using ruff"
 	@echo "  lint - Lint code using ruff and mypy"
 	@echo "  test - Run tests using pytest"
 
+install:
+	uv sync --group dev --group lint --group test
+	uv run pre-commit install
+
 format:
-	mdformat README.md
-	uv run ruff check $(SOURCE_FILES) $(TEST_FILES) --fix
-	uv run ruff format $(SOURCE_FILES) $(TEST_FILES)
+	uv run --frozen ruff check --fix
+	uv run --frozen ruff format
 
 lint:
-	uv run ruff check $(SOURCE_FILES) $(TEST_FILES)
-	uv run mypy ${SOURCE_FILES} ${TEST_FILES}
+	uv run --frozen ruff check
+	uv run --frozen ty check
 
 test:
-	uv run pytest ${TEST_FILES}
+	uv run --frozen pytest ${TEST_FILES}
