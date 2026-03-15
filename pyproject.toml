@@ -78,7 +78,7 @@ error-on-warning = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = [
-    "--cov=./",
+    "--cov=src",
     "--cov-report=xml",
     "--verbose",
 ]
@@ -86,10 +86,6 @@ addopts = [
 [tool.coverage.run]
 branch = true
 source = ["src/"]
-omit = [
-    "config.py",
-    "config-3.py",
-]
 
 [tool.coverage.report]
 show_missing = true
