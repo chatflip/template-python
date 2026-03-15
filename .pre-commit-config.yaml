@@ -19,6 +19,7 @@ repos:
             "/tool/markdown/lint",
           ]
         types: [markdown]
+        exclude: "(^|/)CLAUDE\\.md$"
 
   - repo: local
     hooks:
