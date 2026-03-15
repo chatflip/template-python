@@ -7,7 +7,7 @@ help:
 	@echo "Targets:"
 	@echo "  install - Install dependencies"
 	@echo "  format - Format code using ruff"
-	@echo "  lint - Lint code using ruff and mypy"
+	@echo "  lint - Lint code using ruff and ty"
 	@echo "  test - Run tests using pytest"
 
 install:
