@@ -12,8 +12,8 @@ dev = [
 ]
 
 lint = [
-    "ruff==0.14.4", 
-    "ty>=0.0.1a25",
+    "ruff",
+    "ty",
 ]
 
 test = [
@@ -37,7 +37,6 @@ exclude = [
     ".git",
     ".git-rewrite",
     ".hg",
-    ".mypy_cache",
     ".nox",
     ".pants.d",
     ".pytype",
