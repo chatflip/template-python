@@ -23,4 +23,4 @@ lint:
 	uv run --frozen ty check
 
 test:
-	uv run --frozen pytest ${TEST_FILES}
+	uv run --frozen pytest
