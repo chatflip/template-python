@@ -36,3 +36,10 @@ repos:
         types: [python]
         language: system
         pass_filenames: false
+      - id: ty
+        name: ty
+        entry: uv run --frozen ty
+        args: [check]
+        language: system
+        types: [python]
+        pass_filenames: false
