@@ -134,4 +134,5 @@ dmypy.json
 # Ruff
 .ruff_cache/
 
-.claude
+# claude
+.claude/settings.local.json

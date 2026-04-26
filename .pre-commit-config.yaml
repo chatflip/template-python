@@ -23,24 +23,14 @@ repos:
 
   - repo: local
     hooks:
-      - id: ruff-format
-        name: Ruff Format
-        entry: uv run --frozen ruff
-        args: [format]
-        language: system
-        types: [python]
-        pass_filenames: false
-      - id: ruff
-        name: Ruff
-        entry: uv run --frozen ruff
-        args: ["check", "--fix", "--exit-non-zero-on-fix"]
-        types: [python]
+      - id: format
+        name: make format
+        entry: make format
         language: system
         pass_filenames: false
-      - id: ty
-        name: ty
-        entry: uv run --frozen ty
-        args: [check]
+
+      - id: lint
+        name: make lint
+        entry: make lint
         language: system
-        types: [python]
         pass_filenames: false
